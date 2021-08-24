@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                at.fhtw.disys.standardfxproject.standardfxproject/at.fhtw.disys.standardfxproject.standardfxproject.HelloApplication
+                                at.fhtw.disys.standardfxproject.standardfxproject/at.fhtw.disys.firstfxproject.firstfxproject.HelloApplication
                             </mainClass>
                         </configuration>
                     </execution>

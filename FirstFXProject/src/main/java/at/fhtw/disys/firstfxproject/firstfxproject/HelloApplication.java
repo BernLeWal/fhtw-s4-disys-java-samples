@@ -1,4 +1,4 @@
-package at.fhtw.disys.standardfxproject.standardfxproject;
+package at.fhtw.disys.firstfxproject.firstfxproject;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
