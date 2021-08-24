@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="at.fhtw.disys.samples.EventHandlingController" styleClass="pane">
+    <CheckBox fx:id="check">Enable Button</CheckBox>
+    <Button fx:id="button" onAction="#onButton">My Button</Button>
+    <TextField fx:id="txt"/>
+    <ListView fx:id="lst"/>
+</VBox>
+

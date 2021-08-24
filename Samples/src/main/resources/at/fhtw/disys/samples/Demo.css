@@ -1,0 +1,27 @@
+.bordered-titled-title {
+    -fx-background-color: lightyellow;
+    -fx-font: 1.2em Vivaldi;
+    -fx-text-fill: black;
+    -fx-translate-y: -0.6em; /* play around with this value when changing the title font to get a vertically centered title */
+}
+
+.bordered-titled-border {
+    -fx-content-display: top;
+    -fx-border-insets: 10.0 0.0 0.0 0.0;
+    -fx-border-color: black;
+    -fx-border-width: 2.0;
+}
+
+.bordered-titled-content-pane {
+    -fx-padding: 2.0em 1.0em 1.0em 1.0em;
+    -fx-background-color: lightyellow;
+}
+
+.bordered-titled-content {
+    -fx-padding: 0;
+}
+
+TextArea.bordered-titled-content {
+    -fx-font: 1.2em Vivaldi;
+    -fx-text-fill: blue;
+}

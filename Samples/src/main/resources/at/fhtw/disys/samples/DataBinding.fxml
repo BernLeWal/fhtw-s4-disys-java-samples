@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<TabPane xmlns:fx="http://javafx.com/fxml" fx:controller="at.fhtw.disys.samples.DataBindingController">
+    <Tab text="Controller">
+        <VBox styleClass="pane">
+            <Label text="${controller.text}"/>
+            <!--
+                (bidirectional) binding text to "${controller.text}" is not implemented by JavaFX
+                yet? It has to be done in controller code?
+
+                http://stackoverflow.com/questions/19936719/how-to-do-binding-in-fxml-in-javafx-2
+
+                "What's New in JavaFX 2.1: Bidirectional binding was dropped from JavaFX 2.1, but this feature was retained"
+                http://docs.oracle.com/javafx/2/fxml_get_started/whats_new.htm
+            -->
+            <TextField fx:id="ctrlTextField"/>
+        </VBox>
+    </Tab>
+    <Tab text="Controls">
+        <VBox styleClass="pane">
+            <Label text="${textField.text}"/>
+            <TextField fx:id="textField" text="Hello world"/>
+        </VBox>
+    </Tab>
+</TabPane>
+

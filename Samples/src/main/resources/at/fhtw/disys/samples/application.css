@@ -1,0 +1,52 @@
+.pane {
+    -fx-padding: 25;
+    -fx-spacing: 10;
+}
+
+.editorPane {
+    -fx-padding: 25;
+}
+
+.layoutExample {
+    -fx-border-color: black;
+    -fx-border-width: 1;
+    -fx-border-style: solid;
+    -fx-min-width: 100;
+    -fx-min-height: 100;
+    -fx-text-fill: green;
+    -fx-padding: 25;
+    -fx-alignment: center;
+}
+
+Text.title {
+    -fx-font-size: 2em;
+    -fx-font-weight: bold;
+}
+
+Text.success {
+    -fx-fill: darkgreen;
+    -fx-font-weight: bold;
+}
+
+/* TitledBorder */
+.bordered-titled-title {
+    -fx-background-color: white;
+    -fx-translate-y: -10; /* play around with this value when changing the title font to get a vertically centered title */
+}
+
+.bordered-titled-border {
+    -fx-content-display: top;
+    -fx-border-insets: 10 0 0 0;
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-border-width: 2;
+}
+
+.bordered-titled-content-pane {
+
+}
+
+.bordered-titled-content {
+    -fx-padding: 26 10 10 10;
+}
+

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import at.fhtw.disys.samples.controls.*?>
+<TabPane xmlns:fx="http://javafx.com/fxml" fx:controller="at.fhtw.disys.samples.SimpleBindingController">
+    <Tab text="Bool">
+        <VBox styleClass="pane">
+            <CheckBox fx:id="check">Checked by User</CheckBox>
+            <CheckBox fx:id="checkInverted" disable="true">Inverted</CheckBox>
+        </VBox>
+    </Tab>
+    <Tab text="Bool Visibility">
+        <BorderPane styleClass="pane">
+            <top>
+                <CheckBox fx:id="checkVisibility">Checked by User</CheckBox>
+            </top>
+            <center>
+                <TitledBorder fx:id="border" title="Visibility">
+                    <Text>Should only be visible if the checkbox above is checked</Text>
+                </TitledBorder>
+            </center>
+        </BorderPane>
+    </Tab>
+    <Tab text="Empty Visibility">
+        <BorderPane styleClass="pane">
+            <top>
+                <TextField fx:id="text"/>
+            </top>
+            <center>
+                <TitledBorder fx:id="borderText" title="Visibility">
+                    <Text>Should only be visible if the TextField above is empty</Text>
+                </TitledBorder>
+            </center>
+        </BorderPane>
+    </Tab>
+    <Tab text="Shade">
+        <GridPane styleClass="pane">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="50"/>
+                <ColumnConstraints percentWidth="50"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints percentHeight="50"/>
+                <RowConstraints percentHeight="50"/>
+            </rowConstraints>
+            <TitledBorder GridPane.columnIndex="0"
+                          GridPane.rowIndex="0" GridPane.columnSpan="2" fx:id="borderGreen"
+                          title="Color">
+                <Text fill="white">Color</Text>
+            </TitledBorder>
+            <TitledBorder GridPane.columnIndex="0"
+                          GridPane.rowIndex="1" fx:id="borderLighter" title="Lighter">
+                <Text fill="white">Lighter</Text>
+            </TitledBorder>
+            <TitledBorder GridPane.columnIndex="1"
+                          GridPane.rowIndex="1" fx:id="borderDarker" title="Darker">
+                <Text fill="white">Darker</Text>
+            </TitledBorder>
+        </GridPane>
+    </Tab>
+</TabPane>
+

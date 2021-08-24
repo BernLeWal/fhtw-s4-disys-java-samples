@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<TabPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="at.fhtw.disys.samples.ListsController">
+    <Tab text="ListView">
+        <ListView fx:id="list" onMouseClicked="#onListClicked" />
+    </Tab>
+    <Tab text="TableView">
+        <TableView fx:id="table">
+            <columns>
+                <TableColumn text="Nr">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="nr" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Vorame">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="vorname" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Nachname">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="nachname" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Age">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="alter" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </Tab>
+</TabPane>

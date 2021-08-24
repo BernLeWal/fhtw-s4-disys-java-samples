@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import java.lang.*?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="at.fhtw.disys.samples.ControlsController"
+      styleClass="pane">
+    <Text styleClass="padding" text="some text"/>
+    <TextField styleClass="padding" text="TextBox"/>
+    <ComboBox styleClass="padding">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Apple"/>
+                <String fx:value="Orange"/>
+                <String fx:value="Pear"/>
+            </FXCollections>
+        </items>
+    </ComboBox>
+    <ComboBox styleClass="padding" maxWidth="Infinity">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Apple"/>
+                <String fx:value="Orange"/>
+                <String fx:value="Pear"/>
+            </FXCollections>
+        </items>
+    </ComboBox>
+    <CheckBox styleClass="padding">Checkbox</CheckBox>
+    <fx:define>
+        <ToggleGroup fx:id="myToggleGroup"/>
+    </fx:define>
+    <RadioButton styleClass="padding" toggleGroup="$myToggleGroup">RadioButton 1</RadioButton>
+    <RadioButton styleClass="padding" toggleGroup="$myToggleGroup">RadioButton 2</RadioButton>
+    <RadioButton styleClass="padding" toggleGroup="$myToggleGroup">RadioButton 3</RadioButton>
+    <Button styleClass="padding">Button</Button>
+</VBox>
+

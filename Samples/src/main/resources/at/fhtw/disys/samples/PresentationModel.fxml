@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="at.fhtw.disys.samples.PresentationModelController"
+      styleClass="pane">
+
+    <TitledPane text="Person" fx:id="personPane">
+        <VBox styleClass="editorPane">
+            <Label>Vorname</Label>
+            <TextField fx:id="vorname"/>
+            <Label>Nachname</Label>
+            <TextField fx:id="nachname"/>
+        </VBox>
+    </TitledPane>
+    <TitledPane text="Firma" fx:id="firmaPane">
+        <VBox styleClass="editorPane">
+            <Label>Name</Label>
+            <TextField fx:id="firmenname"/>
+            <Label>UID</Label>
+            <TextField fx:id="UID"/>
+        </VBox>
+    </TitledPane>
+    <TitledPane text="Debug">
+        <VBox styleClass="editorPane">
+            <CheckBox fx:id="isFirma" disable="true">Ist Firma</CheckBox>
+            <CheckBox fx:id="disableEditPerson" disable="true">Person
+                bearbeiten deaktivieren
+            </CheckBox>
+            <CheckBox fx:id="disableEditFirma" disable="true">Firma
+                bearbeiten
+                deaktivieren
+            </CheckBox>
+        </VBox>
+    </TitledPane>
+</VBox>
+

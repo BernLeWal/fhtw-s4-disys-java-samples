@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+<?import at.fhtw.disys.samples.controls.TitledBorder?>
+<?import java.net.URL?>
+<VBox xmlns:fx="http://javafx.com/fxml" styleClass="pane"
+      fx:controller="at.fhtw.disys.samples.CSSController">
+    <!-- Include stylesheet  -->
+    <stylesheets>
+        <URL value="@Demo.css"/>
+    </stylesheets>
+    <Text style="-fx-font-size: 12px;">Font size 12</Text>
+    <Text style="-fx-font-size: 1em;">Font size 1em</Text>
+    <Text style="-fx-font-size: 22px;">Font size 22</Text>
+    <Text styleClass="title">Title style class</Text>
+    <Rectangle style="-fx-fill: #ff0000" width="200" height="200"/>
+    <!-- Custom Control with overridden styles in Demo.css  -->
+    <TitledBorder title="Hello World" fx:id="LoremIpsum">
+        <content>
+            <TextArea wrapText="true"
+                      text="Lorem ipsum dolor sit amet, consetetur
+sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo 
+dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est 
+Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing 
+elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam 
+erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea 
+rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum 
+dolor sit amet."/>
+        </content>
+    </TitledBorder>
+</VBox>
+

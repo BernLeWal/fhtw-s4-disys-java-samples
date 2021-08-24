@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.*?>
+<TabPane xmlns:fx="http://javafx.com/fxml" fx:controller="at.fhtw.disys.samples.ListsPresentationModelController">
+    <Tab text="ListView">
+        <ListView fx:id="list"/>
+    </Tab>
+    <Tab text="TableView">
+        <TableView fx:id="table">
+            <columns>
+                <TableColumn text="Name">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="name"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Age">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="age"/>
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </Tab>
+</TabPane>
