@@ -1,4 +1,4 @@
-package ui.fx.samples;
+package at.fhtw.disys.samples;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

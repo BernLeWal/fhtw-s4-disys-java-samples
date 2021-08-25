@@ -23,13 +23,13 @@
             maxHeight="Infinity" onAction="#onControls">Controls
     </Button>
 
-    <Button GridPane.columnIndex="0" GridPane.rowIndex="1" text="Simple Binding"
-            maxWidth="Infinity" maxHeight="Infinity" onAction="#onSimpleBinding"/>
-    <Button GridPane.columnIndex="1" GridPane.rowIndex="1" text="EventHandling"
+    <Button GridPane.columnIndex="0" GridPane.rowIndex="1" text="EventHandling"
             maxWidth="Infinity" maxHeight="Infinity" onAction="#onEventHandling"/>
-
-    <Button GridPane.columnIndex="0" GridPane.rowIndex="2" text="CSS"
+    <Button GridPane.columnIndex="1" GridPane.rowIndex="1" text="CSS"
             maxWidth="Infinity" maxHeight="Infinity" onAction="#onCSS"/>
+
+    <Button GridPane.columnIndex="0" GridPane.rowIndex="2" text="Simple Binding"
+            maxWidth="Infinity" maxHeight="Infinity" onAction="#onSimpleBinding"/>
     <Button GridPane.columnIndex="1" GridPane.rowIndex="2" text="Images"
             maxWidth="Infinity" maxHeight="Infinity" onAction="#onImages"/>
 
