@@ -15,9 +15,9 @@
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
 
-    <HBox spacing="5" >
+    <HBox spacing="5">
         <Label text="Enter your name:   "/>
-        <TextField fx:id="name" HBox.hgrow="ALWAYS" />
+        <TextField fx:id="name" HBox.hgrow="ALWAYS"/>
     </HBox>
 
     <HBox spacing="5">

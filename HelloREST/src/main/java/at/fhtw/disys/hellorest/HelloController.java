@@ -39,7 +39,7 @@ public class HelloController {
                     final InputStreamReader isr = new InputStreamReader(connection.getInputStream());
                     final BufferedReader br = new BufferedReader(isr)
             ) {
-                welcomeText.setText( br.lines().collect(Collectors.joining()) );
+                welcomeText.setText(br.lines().collect(Collectors.joining()));
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -52,9 +52,9 @@ public class HelloController {
             String urlString = "http://localhost:8080/hello?name=" + URLEncoder.encode(name.getText(), StandardCharsets.UTF_8.toString());
             System.out.println(urlString);
 
-            var request = HttpRequest.newBuilder().uri(URI.create( urlString )).GET().build();
+            var request = HttpRequest.newBuilder().uri(URI.create(urlString)).GET().build();
             var response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
-            System.out.println( "Response Status Code: " + response.statusCode());
+            System.out.println("Response Status Code: " + response.statusCode());
             welcomeText.setText(response.body());
         } catch (Exception e) {
             e.printStackTrace();
@@ -66,19 +66,19 @@ public class HelloController {
         try {
             // parameters will be transferred within the request body
             HashMap<String, String> params = new HashMap<>();
-            params.put("name",name.getText());
-            params.put("value","dummy");
+            params.put("name", name.getText());
+            params.put("value", "dummy");
             StringBuilder requestBody = new StringBuilder();
-            params.entrySet().forEach((v)->requestBody.append(v + "\n"));
+            params.entrySet().forEach((v) -> requestBody.append(v + "\n"));
 
             var request = HttpRequest.newBuilder()
-                    .uri(URI.create( "http://localhost:8080/hello" ))
-                    .POST( HttpRequest.BodyPublishers.ofString(requestBody.toString()))
+                    .uri(URI.create("http://localhost:8080/hello"))
+                    .POST(HttpRequest.BodyPublishers.ofString(requestBody.toString()))
                     .build();
-            System.out.printf("%s\n%s\n", request, params );
+            System.out.printf("%s\n%s\n", request, params);
 
             var response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
-            System.out.println( "Response Status Code: " + response.statusCode());
+            System.out.println("Response Status Code: " + response.statusCode());
             welcomeText.setText(response.body());
         } catch (Exception e) {
             e.printStackTrace();
@@ -108,10 +108,10 @@ public class HelloController {
     public void onWebClientPostClicked(ActionEvent actionEvent) {
         // parameters will be transferred within the request body
         HashMap<String, String> params = new HashMap<>();
-        params.put("name",name.getText());
-        params.put("value","dummy");
+        params.put("name", name.getText());
+        params.put("value", "dummy");
         StringBuilder requestBody = new StringBuilder();
-        params.entrySet().forEach((v)->requestBody.append(v + "\n"));
+        params.entrySet().forEach((v) -> requestBody.append(v + "\n"));
 
         try {
             WebClient client = WebClient.builder()
@@ -120,7 +120,7 @@ public class HelloController {
             System.out.println(client);
             Mono<String> response = client
                     .post()
-                    .body(BodyInserters.fromValue( requestBody.toString() ))
+                    .body(BodyInserters.fromValue(requestBody.toString()))
                     .retrieve()
                     .bodyToMono(String.class);
             welcomeText.setText(response.block());
