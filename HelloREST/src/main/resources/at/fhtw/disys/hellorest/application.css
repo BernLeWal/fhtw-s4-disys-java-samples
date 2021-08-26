@@ -1,0 +1,5 @@
+#content {
+    inset: 20px;
+    -fx-border-insets: 20px;
+    -fx-background-color: green;
+}
