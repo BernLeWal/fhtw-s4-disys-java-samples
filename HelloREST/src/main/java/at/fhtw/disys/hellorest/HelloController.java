@@ -14,8 +14,13 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.stream.Collectors;
+
+import org.springframework.web.reactive.function.BodyInserters;
+import org.springframework.web.reactive.function.client.WebClient;
+import reactor.core.publisher.Mono;
 
 public class HelloController {
     @FXML
@@ -82,9 +87,47 @@ public class HelloController {
     }
 
 
-    public void onWebClientPostClicked(ActionEvent actionEvent) {
+    public void onWebClientClicked(ActionEvent actionEvent) {
+        try {
+            WebClient client = WebClient.builder()
+                    .baseUrl("http://localhost:8080/hello?name=" + URLEncoder.encode(name.getText(), StandardCharsets.UTF_8.toString()))
+                    .build();
+            System.out.println(client);
+            Mono<String> response = client
+                    .get()
+                    .retrieve()
+                    .bodyToMono(String.class);
+            welcomeText.setText(response.block());
+        } catch (Exception e) {
+            e.printStackTrace();
+            welcomeText.setText("ERROR: " + e.getLocalizedMessage());
+        }
     }
 
-    public void onWebClientClicked(ActionEvent actionEvent) {
+
+    public void onWebClientPostClicked(ActionEvent actionEvent) {
+        // parameters will be transferred within the request body
+        HashMap<String, String> params = new HashMap<>();
+        params.put("name",name.getText());
+        params.put("value","dummy");
+        StringBuilder requestBody = new StringBuilder();
+        params.entrySet().forEach((v)->requestBody.append(v + "\n"));
+
+        try {
+            WebClient client = WebClient.builder()
+                    .baseUrl("http://localhost:8080/hello")
+                    .build();
+            System.out.println(client);
+            Mono<String> response = client
+                    .post()
+                    .body(BodyInserters.fromValue( requestBody.toString() ))
+                    .retrieve()
+                    .bodyToMono(String.class);
+            welcomeText.setText(response.block());
+        } catch (Exception e) {
+            e.printStackTrace();
+            welcomeText.setText("ERROR: " + e.getLocalizedMessage());
+        }
     }
+
 }

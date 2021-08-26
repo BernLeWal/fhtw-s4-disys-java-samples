@@ -30,7 +30,7 @@
     </HBox>
     <HBox spacing="5">
         <Button text="WebClient GET" prefWidth="150" onAction="#onWebClientClicked"/>
-        <Button text="WebClient" prefWidth="150" onAction="#onWebClientPostClicked"/>
+        <Button text="WebClient POST" prefWidth="150" onAction="#onWebClientPostClicked"/>
     </HBox>
     <Label fx:id="welcomeText"/>
 </VBox>
